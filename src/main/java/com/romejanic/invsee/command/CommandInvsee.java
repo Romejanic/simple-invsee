@@ -32,8 +32,9 @@ public class CommandInvsee implements CommandExecutor, TabCompleter {
 		String target = args[0];
 		Player player = playerForName(target);
 		
+		// is there a player with that name?
 		if(player != null) {
-			sender.sendMessage(ChatColor.GREEN + "opened inv for " + player.getName());
+			((Player)sender).openInventory(player.getInventory());
 		} else {
 			sender.sendMessage(ChatColor.RED + "No online players named \"" + target + "\" found.");
 		}
@@ -45,6 +46,7 @@ public class CommandInvsee implements CommandExecutor, TabCompleter {
 	public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
 		List<String> options = Lists.newArrayList();
 		if(isPlayer(sender) && args.length == 1) {
+			// filter online players by whether their name matches the input
 			options.addAll(
 				Bukkit.getOnlinePlayers()
 				.stream()
