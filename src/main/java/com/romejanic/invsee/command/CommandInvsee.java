@@ -1,4 +1,4 @@
-package com.romejanic.command;
+package com.romejanic.invsee.command;
 
 import java.util.List;
 import java.util.stream.Collectors;

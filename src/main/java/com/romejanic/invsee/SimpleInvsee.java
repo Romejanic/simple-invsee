@@ -2,7 +2,7 @@ package com.romejanic.invsee;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.romejanic.command.CommandInvsee;
+import com.romejanic.invsee.command.CommandInvsee;
 
 public class SimpleInvsee extends JavaPlugin {
 
