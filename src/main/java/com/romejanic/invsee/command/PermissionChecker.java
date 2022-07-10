@@ -28,7 +28,7 @@ public class PermissionChecker implements Listener {
 			}
 		}
 	}
-	
+	 
 	private boolean hasEditPermission(Player player) {
 		return player.isOp() || player.hasPermission("invsee.edit");
 	}
