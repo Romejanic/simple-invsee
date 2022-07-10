@@ -1,0 +1,25 @@
+name: SimpleInvsee
+version: 1.0.0
+api-version: 1.18
+author: Romejanic
+
+main: com.romejanic.invsee.SimpleInvsee
+
+commands:
+    invsee:
+        description: View a player's inventory
+        permission: invsee.use
+        
+permissions:
+    invsee.*:
+        description: Access to all invsee permissions
+        default: op
+        children:
+            invsee.use: true
+            invsee.edit: true
+    invsee.use:
+        description: Access to /invsee
+        default: op
+    invsee.edit:
+        description: Ability to add/remove items from player's inventories
+        default: op
